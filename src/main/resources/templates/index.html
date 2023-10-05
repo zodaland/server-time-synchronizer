@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript">
+const ws = new WebSocket("ws://localhost:8080/ws");
+ws.onopen = () => {
+    console.log("open");
+};
+ws.onmessage = (event) => {
+    console.log(event);
+};
+ws.onerror = (error) => {
+    console.log(error);
+};
+ws.onclise = () => {
+    console.log("close");
+};
+    </script>
+</head>
+<body>
+hello
+</body>
+</html>
